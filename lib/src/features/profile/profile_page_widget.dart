@@ -1,9 +1,13 @@
-import 'package:demo1/src/features/profile/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
-class ProfileWidget extends StatelessWidget {
-  const ProfileWidget({super.key});
+class ProfilePageWidget extends StatefulWidget {
+  const ProfilePageWidget({super.key});
 
+  @override
+  State<ProfilePageWidget> createState() => _ProfilePageWidgetState();
+}
+
+class _ProfilePageWidgetState extends State<ProfilePageWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,8 +34,8 @@ class ProfileWidget extends StatelessWidget {
                         child: Row(
                           children: [
                             const SizedBox(
-                              height: 50,
-                              width: 50,
+                              height: 60,
+                              width: 60,
                               child: CircleAvatar(
                                 backgroundImage: NetworkImage(
                                     'https://www.koimoi.com/wp-content/new-galleries/2021/01/varun-dhawan-opens-up-on-being-hero-of-the-masses-001.jpg',
@@ -44,13 +48,13 @@ class ProfileWidget extends StatelessWidget {
                             Column(
                               children: [
                                 const Text(
-                                  'JHON DOE',
+                                  'JOHN DOE',
                                   style: TextStyle(fontWeight: FontWeight.w900),
                                 ),
                                 const Text(
                                   '@johncars',
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w700,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 15),
                                 ),
                                 const SizedBox(
@@ -111,7 +115,7 @@ class ProfileWidget extends StatelessWidget {
               height: 3,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0),
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
               child: Container(
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
@@ -224,14 +228,6 @@ class ProfileWidget extends StatelessWidget {
                 ],
               ),
             ),
-          ],
-        ),
-        const Column(
-          children: [
-            SizedBox(
-              height: 165,
-            ),
-            BottomNavBarWidget(),
           ],
         ),
       ],
